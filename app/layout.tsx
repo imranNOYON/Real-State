@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Responsive from "@/components/Responsive";
+import Footer from "@/components/Footer";
+import ScrollTop from "@/components/ScrollTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +30,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Responsive/>
         {children}
+        <Footer/>
+        <ScrollTop/>
       </body>
     </html>
   );
